@@ -46,7 +46,7 @@ def pagesave_portion(join_path, fetch_Product_URL):
         while attempts < max_attempts and not my_selector:
             try:
                 url = fetch_Product_URL
-                scrape_do_token = "f42a5b59aec3467e97a8794c611c436b91589634343"
+                scrape_do_token = ""
                 proxy_url = f"https://api.scrape.do?token={scrape_do_token}&url={urllib.parse.quote(url)}&super=true"
                 response = requests.get(url=proxy_url,
                                         headers=headers,
@@ -975,5 +975,6 @@ output_path = "Coupang_Sample_25_07_2025.xlsx"
 df.to_excel(output_path, index=False)
 
 print(f"Excel file saved to {output_path}")
+
 
 
